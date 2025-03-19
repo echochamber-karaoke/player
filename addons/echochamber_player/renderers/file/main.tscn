@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl1uifv0tkyvh"]
+
+[ext_resource type="Script" uid="uid://2etnnq4bvlhm" path="res://addons/echochamber_player/renderers/file/main.gd" id="1_t25lj"]
+
+[sub_resource type="FFmpegVideoStream" id="FFmpegVideoStream_t25lj"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t25lj")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = SubResource("FFmpegVideoStream_t25lj")
+expand = true

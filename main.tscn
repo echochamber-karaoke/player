@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://fwle50rnx7av"]
+
+[ext_resource type="Script" uid="uid://bmmsfpxm5pd7f" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://b45viu7m73h7" path="res://addons/echochamber_player/player.gd" id="1_uos5d"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xm2m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="EchochamberPlayer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uos5d")
+metadata/_custom_type_script = "uid://b45viu7m73h7"
